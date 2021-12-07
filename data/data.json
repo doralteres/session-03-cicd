@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "firstName": "Yossi",
+      "lastNAme": "Cohen",
+      "age": 34,
+      "gender": "male",
+      "city": "Tel Aviv"
+    },
+    {
+      "firstName": "Rivka",
+      "lastNAme": "Levi",
+      "age": 21,
+      "gender": "female",
+      "city": "Herzelia"
+    },
+    {
+      "firstName": "Yasmin",
+      "lastNAme": "Muallem",
+      "age": 26,
+      "gender": "female",
+      "city": "Tel Aviv"
+    },
+    {
+      "firstName": "Avi",
+      "lastNAme": "Yardeni",
+      "age": 30,
+      "gender": "male",
+      "city": "Rosh Pina"
+    },
+    {
+      "firstName": "Yoni",
+      "lastNAme": "Shchori",
+      "age": 45,
+      "gender": "male",
+      "city": "Tel Aviv"
+    },
+    {
+      "firstName": "Dor",
+      "lastNAme": "Alteresku",
+      "age": 26,
+      "gender": "male",
+      "city": "Rishon LeZion"
+    }
+  ]
+}
