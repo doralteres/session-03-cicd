@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo 'Going to test the application'
                 sh 'yarn test:ci'
-                publish 'junit.xml'
+                junit testResults: 'junit.xml'
             }
         }
         stage('Release') {
