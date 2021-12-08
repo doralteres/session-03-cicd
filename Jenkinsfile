@@ -16,8 +16,10 @@ pipeline {
         }
         stage('Release') {
             when {
-                branch 'main'
-                changelog '^v1\.0\..*'
+                allOf {
+                    branch 'main'
+                    not { changelog '^v1.*' }
+                }
             }
             steps {
                 echo 'Build on main branch - Going to release'
