@@ -1,6 +1,6 @@
 {
   "name": "session-03-cicd",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "index.js",
   "repository": "https://github.com/doralteres/session-03-cicd.git",
   "author": "Dor Alteresku <doralteres@gmail.com>",
