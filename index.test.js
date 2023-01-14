@@ -1,7 +1,7 @@
 const func = require("./index");
 
 test("Search by name returns value", () => {
-  expect(func.searchByFName("Dor").length).toBe(1);
+  expect(func.searchByFName("Yoav").length).toBe(1);
 });
 
 test("Search by name returns the right value", () => {
@@ -9,7 +9,7 @@ test("Search by name returns the right value", () => {
 });
 
 test("Search by name doesnt return value", () => {
-  expect(func.searchByFName("Dorrrr").length).toBe(0);
+  expect(func.searchByFName("Dorr").length).toBe(0);
 });
 
 test("Search by gender returns value", () => {
