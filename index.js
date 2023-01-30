@@ -1,7 +1,6 @@
 const _ = require("lodash");
 
 const { users } = require("./data/data.json");
-//comment
 
 exports.searchByFName = function (fname) {
   return _.filter(users, (u) => u.firstName === fname);
