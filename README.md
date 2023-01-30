@@ -1,6 +1,6 @@
 # session-03-cicd
 
-release stage
+release stage :beer:
 
 ```
  stage('Release') {
