@@ -22,10 +22,10 @@ pipeline {
                 }
             }
             steps {
-                // withCredentials([gitUsernamePassword(credentialsId: 'doralteres_gh', gitToolName: 'Default')]) {
+                withCredentials([gitUsernamePassword(credentialsId: 'doralteres_gh_token', gitToolName: 'Default')]) {
                     echo 'Build on main branch - Going to release'
                     sh 'yarn version --patch'
-                // }
+                }
             }
         }
     }
