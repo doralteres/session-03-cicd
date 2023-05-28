@@ -16,4 +16,3 @@ release stage
             }
         }
 ```
-🍺
