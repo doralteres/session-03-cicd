@@ -22,8 +22,10 @@ pipeline {
                 }
             }
             steps {
-                echo 'Build on main branch - Going to release'
-                sh 'yarn version --patch'
+                withCredentials([gitUsernamePassword(credentialsId: 'doralteres_gh', gitToolName: 'Default')]) {
+                    echo 'Build on main branch - Going to release'
+                    sh 'yarn version --patch'
+                }
             }
         }
     }
