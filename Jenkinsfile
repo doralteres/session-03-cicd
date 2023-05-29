@@ -11,7 +11,6 @@ pipeline {
             steps {
                 echo 'Going to test the application'
                 sh 'yarn test:ci'
-                junit testResults: 'junit.xml'
             }
         }
          stage('Release') {
@@ -27,6 +26,11 @@ pipeline {
                     sh 'yarn version --patch'
                 }
             }
+        }
+    }
+    post {
+        always {
+            junit testResults: 'junit.xml'
         }
     }
 }
