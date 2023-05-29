@@ -42,5 +42,12 @@
       "gender": "male",
       "city": "Rishon LeZion"
     }
+    {
+      "firstName": "Yioav",
+      "lastNAme": "Shiylon",
+      "age": 24,
+      "gender": "",
+      "city": "Rishon"
+    }
   ]
 }
