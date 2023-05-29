@@ -3,16 +3,18 @@
 release stage
 
 ```
- stage('Release') {
+         stage('Release') {
             when {
                 allOf {
                     branch 'main'
-                    changelog '^(?!v1.0).*'
+                    changelog '^(?!v1.1).*'
                 }
             }
             steps {
-                echo 'Build on main branch - Going to release'
-                sh 'yarn version --patch'
+                withCredentials([gitUsernamePassword(credentialsId: 'doralteres_gh_token', gitToolName: 'Default')]) {
+                    echo 'Build on main branch - Going to release'
+                    sh 'yarn version --patch'
+                }
             }
         }
 ```
