@@ -27,7 +27,7 @@ pipeline {
             steps {
                 echo 'Build on main branch - Going to release'
                 nodejs('NODE 23') {
-                    sh 'yarn version --patch'
+                    sh 'npm version --patch'
                 }
             }
         }
