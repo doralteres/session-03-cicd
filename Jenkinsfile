@@ -21,7 +21,7 @@ pipeline {
             when {
                 allOf {
                     branch 'main'
-                    changelog '^(?!v1.1).*'
+                    changelog '^(?!1.1).*'
                 }
             }
             steps {
