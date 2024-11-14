@@ -13,3 +13,7 @@ exports.searchByGender = function (gender) {
 exports.searchByAgeBT = function (age) {
   return _.filter(users, (u) => u.age > age);
 };
+
+exports.searchByAgeST = function (age) {
+  return _.filter(users, (u) => u.age < age);
+};
