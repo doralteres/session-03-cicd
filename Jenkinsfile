@@ -4,13 +4,17 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Going to install project dependencies'
-                sh 'npm install'
+                nodejs('NODE 23') {
+                    sh 'npm install'
+                }
             }
         }
         stage('Test') {
             steps {
                 echo 'Going to test the application'
-                sh 'npm run test:ci'
+                nodejs('NODE 23') {
+                    sh 'npm run test:ci'
+                }
             }
         }
         stage('Release') {
@@ -22,8 +26,9 @@ pipeline {
             }
             steps {
                 echo 'Build on main branch - Going to release'
-                sh 'yarn version --patch'
-                
+                nodejs('NODE 23') {
+                    sh 'yarn version --patch'
+                }
             }
         }
     }
