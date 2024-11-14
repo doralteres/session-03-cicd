@@ -4,13 +4,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Going to install project dependencies'
-                sh 'yarn'
+                sh 'npm install'
             }
         }
         stage('Test') {
             steps {
                 echo 'Going to test the application'
-                sh 'yarn test:ci'
+                sh 'nom run test:ci'
             }
         }
         stage('Release') {
@@ -21,10 +21,9 @@ pipeline {
                 }
             }
             steps {
-                withCredentials([gitUsernamePassword(credentialsId: '28b2de00-4e11-4482-b507-a6a668c2c287', gitToolName: 'Default')]) {
-                    echo 'Build on main branch - Going to release'
-                    sh 'yarn version --patch'
-                }
+                echo 'Build on main branch - Going to release'
+                sh 'yarn version --patch'
+                
             }
         }
     }
