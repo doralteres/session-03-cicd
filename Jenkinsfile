@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Going to test the application'
-                sh 'nom run test:ci'
+                sh 'npm run test:ci'
             }
         }
         stage('Release') {
