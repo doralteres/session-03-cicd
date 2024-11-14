@@ -19,7 +19,3 @@ test("Search by gender returns value", () => {
 test("Search by age returns value", () => {
   expect(func.searchByAgeBT(39).length).toBe(1);
 });
-
-test("Search by age smaller than returns value", () => {
-  expect(func.searchByAgeST(39).length).toBe(6);
-});

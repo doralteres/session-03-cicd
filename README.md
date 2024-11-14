@@ -3,17 +3,19 @@
 release stage
 
 ```
-         stage('Release') {
+        stage('Release') {
             when {
                 allOf {
                     branch 'main'
-                    changelog '^(?!v1.1).*'
+                    changelog '^(?!1.1).*'
                 }
             }
             steps {
-                withCredentials([gitUsernamePassword(credentialsId: 'doralteres_gh_token', gitToolName: 'Default')]) {
-                    echo 'Build on main branch - Going to release'
-                    sh 'yarn version patch'
+                echo 'Build on main branch - Going to release'
+                nodejs('NODE 23') {
+                    withCredentials([gitUsernamePassword(credentialsId: 'doralteres', gitToolName: 'Default')]) {
+                        sh 'npm version patch'
+                    }
                 }
             }
         }
