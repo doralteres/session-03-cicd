@@ -5,7 +5,7 @@ test("Search by name returns value", () => {
 });
 
 test("Search by name returns the right value", () => {
-  expect(func.searchByFName("Rivka")[0].firstName).toBe("Rivka");
+  expect(func.searchByFName("Rivka")[0].firstName).toBe("Rivkaa");
 });
 
 test("Search by name doesnt return value", () => {
