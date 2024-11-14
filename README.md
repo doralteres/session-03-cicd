@@ -13,11 +13,8 @@ release stage
             steps {
                 withCredentials([gitUsernamePassword(credentialsId: 'doralteres_gh_token', gitToolName: 'Default')]) {
                     echo 'Build on main branch - Going to release'
-                    sh 'yarn version --patch'
+                    sh 'yarn version patch'
                 }
             }
         }
 ```
-
-
-
