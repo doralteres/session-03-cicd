@@ -15,7 +15,7 @@
   "scripts": {
     "test": "jest",
     "test:ci": "jest --ci --reporters=default --reporters=jest-junit",
-    "preversion": "git config --global user.email \"doralteres@gmail.com\" && git config --global user.name \"Dor Ateresku\"",
+    "preversion": "git config --global user.email \"doralteres@gmail.com\" && git config --global user.name \"Dor Ateresku\" && git status",
     "postversion": "git push --tags && git push origin HEAD:main && echo \"Successfully released version $npm_package_version!\""
   }
 }
