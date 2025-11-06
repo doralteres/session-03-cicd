@@ -28,6 +28,7 @@ pipeline {
                 echo 'Build on main branch - Going to release'
                 nodejs('NODE 23') {
                     withCredentials([gitUsernamePassword(credentialsId: 'doralteres', gitToolName: 'Default')]) {
+                        sh 'git status'
                         sh 'npm version patch'
                     }
                 }
